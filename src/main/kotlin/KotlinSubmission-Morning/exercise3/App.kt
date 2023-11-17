@@ -16,5 +16,13 @@ fun main() {
     - Isi variabel result dengan nilai: 'Anda mendapatkan nilai E.'
      */
     // Buat di bawah sini
-
+    fun evalNilai(nilai: Int): String{
+        return if (nilai >= 90){
+            "Selamat! Anda mendapatkan nilai A"
+        } else if(nilai in 80 .. 89){
+            "Anda mendapatkan nilai B"
+        }else{
+            "Nilai tidak valid"
+        }
+    }
 }

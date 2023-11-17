@@ -10,6 +10,12 @@ Lengkapi fungsi myProfile di bawah ini dengan membuat variabel dengan ketentuan 
 Dan Cetak setiap variabel ke layar saat variable myProfile di panggil
  */
 fun myProfile() {
+    val firstName = "Mutiara"
+    val lastName = "Sabrina Jauhari"
+    val age = 21
+    val isSingle = true
+
+    println("Haloo, nama saya adalah $firstName $lastName, dan saya berusia $age tahun, saya berstatus single $isSingle")
 
 }
 
@@ -19,7 +25,8 @@ fun myProfile() {
  *  Lengkapi fungsi di bawah ini agar dapat mencetak nilai dari parameter-parameter yang ada dengan fungsi println
  */
 fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
-    return ""
+
+    return Any()
 }
 
 /**
@@ -28,9 +35,9 @@ fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
  * Kemudian akses item yang berisi nama Anda dari variable tersebut, lalu jadikan nilai kembalian untuk fungsi myTeam ini
  *
  */
-fun myTeam(): List<Any> {
+fun myTeam(anggotaMassive: List<Any>): Any {
 
-    return listOf()
+    return anggotaMassive[2]
 }
 
 /**
@@ -40,28 +47,45 @@ fun myTeam(): List<Any> {
  *      total mentor + jumlah anggota group
  *
  */
-fun totalMember(): Int {
-    val mentor = arrayOf<String>()
-    val countOfGroup = arrayOf<String>()
+fun totalMember(anggotaMassive: List<String>): Int {
+    val mentor = arrayOf<String>("Imam", "Jovian")
 
-    return 0
+    return mentor.size + anggotaMassive.size
 }
 
 fun main() {
+    val anggotaMassive = listOf<String>(
+        "Muhammad Firdaus",
+        "Dito Iqbal Kesuma",
+        "Mutiara Sabrina Jauhari",
+        "Austin Nicholas",
+        "Rahmad Ikhsan",
+        "Aina Fazla",
+        "Fadhila Risfaniatul",
+        "Kayla Vyanca",
+        "Rizka Hilmi",
+        "Alfin Satriawan",
+        "Adityo Khori"
+    )
 
     myProfile()
 
-    val myTeam = myTeam()
+    val myTeam = myTeam(anggotaMassive)
     println("My team is: $myTeam")
 
-    val totalMember = totalMember()
+    val totalMember = totalMember(anggotaMassive)
     println("Total Member group : $totalMember")
+
+    val groupId = "Eternal Light"
+    val groupMember = anggotaMassive
+    val session = "B-Morning"
+    println("\n Saya dari grup $groupId berikut member dari grup saya: \n $groupMember \n Kami dari sesi $session")
 
     /**
      *  Latihan 5
      *  Ubah nilai argumen-argumen dari fungsi groupDetail di bawah ini sesuai dengan data group kamu
      *
      */
-    groupDetail("", listOf(), "")
+    groupDetail("Eternal Light", anggotaMassive, "Morning")
 
 }
