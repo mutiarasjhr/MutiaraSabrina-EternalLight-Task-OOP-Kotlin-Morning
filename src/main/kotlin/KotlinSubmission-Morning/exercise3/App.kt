@@ -18,11 +18,21 @@ fun main() {
     // Buat di bawah sini
     fun evalNilai(nilai: Int): String{
         return if (nilai >= 90){
-            "Selamat! Anda mendapatkan nilai A"
+            "Selamat! Anda mendapatkan nilai A."
         } else if(nilai in 80 .. 89){
-            "Anda mendapatkan nilai B"
+            "Anda mendapatkan nilai B."
+        } else if(nilai in 70 .. 79){
+            "Anda mendapatkan nilai C."
+        } else if(nilai in 60 .. 69){
+            "Anda mendapatkan nilai D."
+        } else if(nilai < 60){
+            "Anda mendapatkan nilai E."
         }else{
-            "Nilai tidak valid"
+            "Tidak Ada Nilai"
         }
     }
+    var nilai = 75
+    var hasilNilai = evalNilai(nilai)
+
+    println(hasilNilai)
 }

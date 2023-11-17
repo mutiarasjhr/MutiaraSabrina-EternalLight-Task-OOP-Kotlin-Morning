@@ -7,7 +7,7 @@ fun main() {
      * Buat variable dengan nama hero dibawah ini dan isi nilai variable tersebut dengan class Hero
      *
      */
-
+    var hero = Hero()
 
     /**
      * Latihan 2
@@ -15,6 +15,7 @@ fun main() {
      * Dan isi argumen-argumen / data dari parameter sesuai data diri Anda (Name, Age, Height)
      *
      */
+    hero.setProfile("Mutiara Sabrina Jauhari", 21, 148)
 
 
 
@@ -24,7 +25,7 @@ fun main() {
      *
      */
 
-
+    hero.profile()
 
     /**
     Challenge:
@@ -63,9 +64,25 @@ fun main() {
     /**
      * Latihan 4
      * Jalankan aktivitas-aktivitas dengan memanggil fungsi-fungsi sesuai challenge diatas
-     *
+     * Saya dari Eternal Light -> jalan 3x, lari 2x, makan 4x, minum 1x, lompat 5x, duduk 1x
      */
 
+    hero.jalan()
+    hero.jalan()
+    hero.jalan()
+    hero.lari()
+    hero.lari()
+    hero.makan()
+    hero.makan()
+    hero.makan()
+    hero.makan()
+    hero.minum()
+    hero.lompat()
+    hero.lompat()
+    hero.lompat()
+    hero.lompat()
+    hero.lompat()
+    hero.duduk()
 
 
     /**
@@ -74,6 +91,6 @@ fun main() {
      *
      */
 
-
+    hero.profile()
 
 }
